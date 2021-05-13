@@ -31,6 +31,11 @@
   
  
   <dependencies>
+  <dependency>
+    <groupId>net.sf.opencsv</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>2.3</version>
+</dependency>
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
@@ -42,7 +47,11 @@
     <artifactId>poi</artifactId>
     <version>3.17</version>
 </dependency>
-  
+  <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.5</version>
+</dependency>
   
    <dependency>
     <groupId>io.cucumber</groupId>
@@ -55,7 +64,7 @@
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-junit</artifactId>
     <version>4.8.0</version>
-    <scope>test</scope>
+   
 </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 

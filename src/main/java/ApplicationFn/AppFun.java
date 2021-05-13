@@ -8,13 +8,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import Utlities.Propertyutils;
 
+
 public class AppFun {
-	public static WebDriver driver;
+	public  static WebDriver driver;
 	String sBroswer = "CHROME";
 	Propertyutils util;
-	
+	String sFile=System.getProperty("user.dir")+"\\src\\main\\java\\Utlities\\Environment_Variables.properties";
+
+	   
 	public AppFun(WebDriver driver){
-		this.driver = driver;}
+		this.driver = driver;
+		util = new Propertyutils(sFile);
+		}
 	
 		public void Initiate_Browser(){
 			
@@ -26,7 +31,7 @@ public class AppFun {
 			public void Launch_Application() throws IOException{
 				
 				String sURL = util.getEnvironmentProperty("Flipkart");
-				driver.manage().window().maximize();
+				
 				
 				driver.get(sURL);
 				driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);

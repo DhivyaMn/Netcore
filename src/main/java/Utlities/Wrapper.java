@@ -1,13 +1,14 @@
 package Utlities;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Wrapper {
-	private static final String ENTER = null;
+
 	private WebDriver driver;
 public Wrapper(WebDriver driver) {
 		
@@ -34,5 +35,5 @@ public WebElement waitUntilVisible(By locator ,int timeout){
 		element.click();
 		element.clear();
 		element.sendKeys(text);
-		element.sendKeys(ENTER);
+		element.sendKeys(Keys.ENTER);
 }}

@@ -9,11 +9,22 @@ import java.util.Properties;
 public class Propertyutils {
 	Properties prop = new Properties();
 	
+	public Propertyutils(String fileName) {
+		
+			try{
+			InputStream input =  null;
+			input = new FileInputStream(fileName);
+			prop.load(input);				
+			
+			}
+			catch (IOException e) {
+				System.out.println("Error "+e);
+		   }
+		}
+
 	public String getEnvironmentProperty(String propertyKey) throws IOException
 	{
-		InputStream input =  null;
-		input = new FileInputStream("System.getProperty(\"user.dir\")"+"\\eclipse-workspace\\NetCore\\src\\main\\java\\Utlities\\Environment_Variables.properties");
-		prop.load(input);
+
 		String propertyValue=null;
 		propertyValue=prop.getProperty(propertyKey);
 		
